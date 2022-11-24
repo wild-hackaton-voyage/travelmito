@@ -7,7 +7,7 @@ import Transition from './components/Navbar/Transition';
 
 const App = () => {
   return (
-    <div>
+    <div className="app">
       <Router>
         <Navbar/>
         <Transition/>
