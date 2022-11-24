@@ -2,11 +2,14 @@ import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Mitoticket from "./Mitoticket/MitoTick";
 
-const MitoVerse = () => {
+const MitoVerse = ({ handleDestination, destination }) => {
   return (
     <div>
-      <Navbar />
-      <Mitoticket />
+      <Navbar handleDestination={handleDestination} destination={destination} />
+      <Mitoticket
+        handleDestination={handleDestination}
+        destination={destination}
+      />
     </div>
   );
 };

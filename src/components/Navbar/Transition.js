@@ -31,8 +31,13 @@ function Transition() {
         element={<Mitoselfie destination={destination} />}
       />
       <Route
-        path="/Mitoticket"
-        element={<MitoVerse destination={destination} />}
+        path="/Mitoticket/:id"
+        element={
+          <MitoVerse
+            handleDestination={handleDestination}
+            destination={destination}
+          />
+        }
       />
       <Route path="*" element={<ErrorMessage />} />
     </Routes>
