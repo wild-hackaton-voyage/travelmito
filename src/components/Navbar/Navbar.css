@@ -1,0 +1,21 @@
+
+
+.navbar-container ul  {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 5rem;
+    width: 30%;
+    height: auto;
+    margin: 0;
+    background-color: cyan;
+    border: 1mm solid;
+}
+.navbar-container ul li {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1mm solid;
+    list-style-type: none;
+}
