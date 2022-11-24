@@ -1,10 +1,11 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import MitoVerse from "./pages/MitoVerse";
 const App = () => {
   return (
-    <div>
-      <h1>TravelMito</h1>
-      
+    <div className="ticketContainer">
+      <MitoVerse />
     </div>
   );
 };

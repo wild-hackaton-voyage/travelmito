@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+#ticket {
+  height: 60vmin;
+}
+#cityName {
+  color: white;
+  text-align: center;
+  padding-top: 10vh;
+  padding-right: 37vw;
+  font-family: "Montserrat", sans-serif;
+}
+.ticketContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ticketCard {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30vh;
+  padding-left: 20vw;
+}
+.arrow {
+  width: 10vh;
+  height: 10vh;
+}
+#arrowLeft {
+  transform: rotate(180deg);
+  margin-right: 5vw;
+  margin-top: 20vh;
+}
+#arrowRight {
+  margin-left: 4vw;
+  margin-top: 20vh;
+}
+#planet {
+  position: absolute;
+  bottom: 30%;
+  left: 60%;
+  width: 60%;
+}
+.planetAnim {
+  position: absolute;
+  bottom: 5%;
+
+  width: 100%;
+  height: 100%;
+}

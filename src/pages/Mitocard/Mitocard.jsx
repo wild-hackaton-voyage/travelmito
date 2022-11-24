@@ -2,8 +2,8 @@ import React from 'react';
 
 const Mitocard = () => {
     return (
-        <div>
-            
+        <div >
+            <img src="" alt="" />
         </div>
     );
 };
