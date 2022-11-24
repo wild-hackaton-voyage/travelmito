@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import { useParams } from 'react-router-dom';
 import Cartes from '../../components/Navbar/Cartes';
+import Navbar from '../../components/Navbar/Navbar';
 
 
 const responsive = {
   
 
   /* Responsive du carousel */
+
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
       items: 3,
@@ -31,16 +33,18 @@ const responsive = {
   };
 
   
-  const Mitocard = () => {
+  const Mitocard = ({handleDestination, destination}) => {  
     const {id} = useParams();
-    const [country, setCountry] =useState();
 
-    useEffect(()=>setCountry(id),[]);
+    useEffect(()=>{
+      handleDestination(id)
+    },[id]);
 
     return (
         <div>   
+            <Navbar destination={destination}/>
             <div className="carousel">
-              {country}
+              {destination} coucou
             </div>
             
         </div>

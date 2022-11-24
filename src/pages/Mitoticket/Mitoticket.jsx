@@ -1,10 +1,11 @@
 import React from 'react';
 import Navbar from "../../components/Navbar/Navbar";
 
-const Mitoticket = () => {
+const Mitoticket = ({destination}) => {
     return (
         <div>
-            <Navbar />
+            <Navbar destination={destination} />
+            {destination}
         </div>
     );
 };

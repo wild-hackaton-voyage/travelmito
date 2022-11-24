@@ -1,10 +1,13 @@
 import React from 'react';
 import Navbar from "../../components/Navbar/Navbar";
 
-const Mitoselfie = () => {
+const Mitoselfie = ({destination}) => {
+
+    console.log(destination);
     return (
         <div>
-            <Navbar />
+            <Navbar destination={destination}/>
+            {destination} salut
         </div>
     );
 };

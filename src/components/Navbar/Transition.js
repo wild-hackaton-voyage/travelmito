@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { Routes, Route, useSubmit } from "react-router-dom";
 import Mithome from '../../pages/Mithome/Mithome';
 import Mitocard from '../../pages/Mitocard/Mitocard';
 import Mitoselfie from '../../pages/Mitoselfie/Mitoselfie';
@@ -7,28 +7,32 @@ import Mitoticket from '../../pages/Mitoticket/Mitoticket';
 import ErrorMessage from '../ErrorMessage';
 
 function Transition() {
+
+  const[destination, setDestination] = useState("");
+
+  const handleDestination = (destination) =>{
+    setDestination(destination);
+  }
+
   return (
    <Routes>
       <Route path="/" element={<Mithome />} />
       <Route
         path="/carte/:id"
         element={
-          <Mitocard
-          />
+          <Mitocard handleDestination={handleDestination} destination ={destination}/>
         }
       />
         <Route
-        path="/mitoselfie"
+        path="/Mitoselfie"
         element={
-          <Mitoselfie
-          />
+          <Mitoselfie destination={destination} />
         }
       />
             <Route
-        path="/mitoticket"
+        path="/Mitoticket"
         element={
-          <Mitoticket
-          />
+          <Mitoticket destination={destination} />
         }
       />
              <Route
