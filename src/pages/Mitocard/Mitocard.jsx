@@ -43,7 +43,8 @@ const Mitocard = ({ handleDestination, destination }) => {
   return (
     <div>
       <Navbar destination={destination} />
-      <div className="carousel">{destination} coucou</div>
+      <h1 className="carteTitre"> Choisis ta mitocarte </h1>
+      <div className="carouselCart">{destination} coucou</div>
           <Carousel responsive={responsive} >
             <img 
             className="postcard"    
