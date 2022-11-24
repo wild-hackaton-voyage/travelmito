@@ -36,6 +36,9 @@ const Mitocard = ({ handleDestination, destination }) => {
     handleDestination(id);
   }, [id]);
 
+  console.log(destination,"carte");
+
+
   return (
     <div>
       <Navbar destination={destination} />
