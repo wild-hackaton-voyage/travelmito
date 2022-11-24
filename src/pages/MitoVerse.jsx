@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import Mitoticket from "./Mitoticket/mitoticket";
+import Mitoticket from "./Mitoticket/Mitoticket";
 
 const MitoVerse = () => {
   return (

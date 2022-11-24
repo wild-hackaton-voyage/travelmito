@@ -1,6 +1,8 @@
 import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
 import "./mitoticket.css";
-const Mitoticket = () => {
+
+const Mitoticket = ({ destination }) => {
   return (
     <div className="ticketContainer">
       <h1 id="cityName">RIO DE JANEIRO</h1>

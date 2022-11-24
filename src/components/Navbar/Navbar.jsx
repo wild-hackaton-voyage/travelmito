@@ -1,19 +1,25 @@
-import React from "react";
-import "./Navbar.css";
-const Navbar = () => {
-  return (
-    <div className="navBar">
-      <h1 id="mitoCard" className="navTabs">
+import React from 'react'
+import { NavLink, Link } from "react-router-dom";
+import './Navbar.css';
+
+
+const Navbar = ({destination}) => {
+    return (
+        <div className="navBar" >
+        
+            {/* <Link to= "/"> <li>Travel Mithome</li> </Link> */}
+            <Link to= {`/carte/${destination}`}>   <h1 id="mitoCard" className="navTabs">
         MitoCard
-      </h1>
-      <h1 className="navTabs" id="mitoSelfie">
+      </h1> </Link>
+            <Link to= "/Mitoselfie">   <h1 className="navTabs" id="mitoSelfie">
         MitoSelfie
-      </h1>
-      <h1 className="navTabs" id="mitoTicket">
+      </h1> </Link>
+            <Link to= "/Mitoticket">  <h1 className="navTabs" id="mitoTicket">
         MitoTicket
-      </h1>
+      </h1></Link>
+        
     </div>
-  );
-};
+    );
+}
 
 export default Navbar;
