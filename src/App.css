@@ -1,5 +1,6 @@
 @import url("https://use.typekit.net/ano6edr.css");
 .ticketContainer {
+  background-image: url(/public/background-mapmonde.png);
   min-height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;

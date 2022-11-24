@@ -10,14 +10,14 @@ const Mitoticket = () => {
       </div>
 
       {/* <img src="/realplanet.png" alt="3" id="planet" /> */}
-{/*       <div className="planetAnim">
+      <div className="planetAnim">
         <iframe
           src="https://my.spline.design/worldryan-f71c4eecd1ec75de6a66ecc5af7e71ca/"
           frameborder="0"
           width="100%"
           height="100%"
         ></iframe>
-      </div> */}
+      </div>
     </div>
   );
 };

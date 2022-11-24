@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import './App.css';
-import Transition from './components/Navbar/Transition';
-
+import "./App.css";
+import Transition from "./components/Navbar/Transition";
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="ticketContainer">
       <Router>
-        <Transition/>
-      </Router>  
+        <Transition />
+      </Router>
     </div>
   );
 };
