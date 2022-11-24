@@ -43,6 +43,18 @@ const Mitocard = ({ handleDestination, destination }) => {
     <div>
       <Navbar destination={destination} />
       <div className="carousel">{destination} coucou</div>
+          <Carousel responsive={responsive} >
+            <img 
+            className="postcard"    
+            src="Cartes/France/France1.jpeg"
+            alt = "France1"
+            />    
+            <img 
+            className="postcard"    
+            src="././France/France1.jpeg"
+            alt = "France1"
+          /> 
+          </Carousel>
     </div>
   );
 };
