@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 #ticket {
   height: 60vmin;
 }
@@ -17,9 +16,41 @@
 }
 .ticketCard {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-bottom: 18vh;
   padding-left: 20vw;
+  padding-right: 58vw;
+}
+input {
+  position: absolute;
+  top: 42%;
+  left: 21%;
+  width: 7vw;
+  background: transparent;
+  border: none;
+  z-index: 6;
+}
+#cityTicket {
+  color: rgb(255, 254, 152);
+  display: none;
+  z-index: 7;
+  position: absolute;
+  top: 40%;
+  left: 21%;
+  font-size: .9rem;
+  font-weight: 100;
+  font-family: Arial, sans-serif;
+}
+#cityCode {
+  color: white;
+  display: none;
+  z-index: 7;
+  position: absolute;
+  top: 43%;
+  left: 21%;
+  font-size: 1.7rem;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
 }
 .arrow {
   width: 10vh;
