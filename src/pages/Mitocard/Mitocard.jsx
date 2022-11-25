@@ -91,10 +91,9 @@ const Mitocard = ({ handleDestination, destination }) => {
             />  
           </Carousel>
           </div>}
-          {displayCarte && <div className >
+          {displayCarte && <div>
           <h1 className="carteTitre"> Ecris ta mito carte </h1>
-          <div className ="ecriCarte">
-          <img className ="verso" src="/cartepostale.png" alt="verso"/>
+            <div className="customCart">
             <div>
             <img 
             className="postcard"    
@@ -102,7 +101,14 @@ const Mitocard = ({ handleDestination, destination }) => {
             alt = {cart}
             />  
             </div>
-          </div>  
+          <div className ="cartecontainer">
+          <img className ="verso" src="/cartepostale.png" alt="verso"/>
+          <textarea className="textleft" />
+          <textarea className="textright" />
+          <textarea className="textright2" />
+          <textarea className="textright3" />
+          </div> 
+          </div> 
           </div>}
     </div>
   );

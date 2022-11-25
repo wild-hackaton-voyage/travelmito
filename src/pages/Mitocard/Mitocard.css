@@ -14,18 +14,57 @@ margin: 3vw;
 scale:1.5;
 }
 
-.verso {
-    position:absolute;
-    width: 50vw;
-    height: auto;
-}   
-
-.ecriCarte {
+.customCart {
     display: flex;
     flex-direction: row;
 }
+
 
 .postCardSelected{
     margin :4vw;
     align-items: center;
 }
+
+
+.verso {
+    width: 40vw;
+    height:30vw ;
+
+
+
+}
+.cartecontainer {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-left: 3vw;
+  }
+
+
+.textleft {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 18vw;
+    height: 25vw;
+    
+}
+
+.textright{
+    position:absolute;
+    top: 12vw;
+    right: 4vw;
+    width: 15vw;
+}       
+.textright2{
+    position:absolute;
+    top: 16vw;
+    right: 4vw;
+    width: 15vw;
+}       
+.textright3{
+    position:absolute;
+    top: 22vw;
+    right: 4vw;
+    width: 15vw;
+}   
