@@ -37,47 +37,67 @@ const Mitocard = ({ handleDestination, destination }) => {
     handleDestination(id);
   }, [id]);
 
+  const[displayCarousel, setCarousel]= useState(true);
+  const [displayCarte, setDisplayCarte] = useState(false);
+  const[cart, setCart]= useState("");
+
   console.log(destination,"carte");
+
+  const handleMouseOver = (event) => {
+    setCart(event.target.alt);
+  }
+
+  const handleClick = () => {
+    setCarousel(false);
+    setDisplayCarte(true);
+  }
 
 
   return (
     <div>
       <Navbar destination={destination} />
+      {displayCarousel && <div className="carouselCart">
       <h1 className="carteTitre"> Choisis ta mitocarte </h1>
-      <div className="carouselCart">
           <Carousel responsive={responsive} >
-            <img 
+            <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="postcard"    
             src={`/Cartes/${destination}/${destination}1.jpeg`}
             alt = {`${destination}1`}
             /> 
-            <img 
+                <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="postcard"    
             src={`/Cartes/${destination}/${destination}2.jpeg`}
             alt = {`${destination}2`}
             /> 
-            <img 
+                 <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="postcard"    
             src={`/Cartes/${destination}/${destination}3.jpeg`}
             alt = {`${destination}3`}
             />  
-            <img 
+               <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="postcard"    
             src={`/Cartes/${destination}/${destination}4.jpeg`}
             alt = {`${destination}4`}
             />  
-        <img 
+           <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="postcard"    
             src={`/Cartes/${destination}/${destination}5.jpeg`}
             alt = {`${destination}5`}
             />  
           </Carousel>
-          </div>
+          </div>}
+          {displayCarte && <div>
+          <h1 className="carteTitre"> Ecris ta mito carte </h1>
           <div className ="verso">
 
-Salut
-
-          </div>
+        Salut
+            </div>
+          </div>}
     </div>
   );
 };
