@@ -3,11 +3,9 @@ import { useParams } from "react-router-dom";
 import "./mitoticket.css";
 const Mitoticket = ({ handleDestination, destination }) => {
   console.log(destination, "destination");
-  const { id } = useParams();
-  useEffect(() => {
-    handleDestination(id);
-  }, [id]);
-
+  const [cityName, setCityName] = useState("");
+  const [cityCode, setCityCode] = useState("");
+  const [dissapear, setDissapear] = useState(false);
   const changeCityName = () => {
     switch (destination) {
       case "France":
@@ -38,6 +36,43 @@ const Mitoticket = ({ handleDestination, destination }) => {
       case "Russie":
         {
           return <h1 id="cityName">Moscou</h1>;
+        }
+        break;
+      default:
+        return <h1 id="cityName">RIO</h1>;
+        break;
+    }
+  };
+  const changeTicketCity = () => {
+    switch (destination) {
+      case "France":
+        {
+          return <img src="/Ticket-Paris.png" alt="2" id="ticket" />;
+        }
+        break;
+      case "Canada":
+        {
+          return <img src="/Ticket-Ottawa.png" alt="2" id="ticket" />;
+        }
+        break;
+      case "Australie":
+        {
+          return <img src="/Ticket-Sydney.png" alt="2" id="ticket" />;
+        }
+        break;
+      case "Bresil":
+        {
+          return <img src="/Ticket-Rio.png" alt="2" id="ticket" />;
+        }
+        break;
+      case "Egypte":
+        {
+          return <img src="/Ticket-Cairo.png" alt="2" id="ticket" />;
+        }
+        break;
+      case "Russie":
+        {
+          return <img src="/Ticket-Moscou.png" alt="2" id="ticket" />;
         }
         break;
       default:
@@ -124,14 +159,49 @@ const Mitoticket = ({ handleDestination, destination }) => {
         break;
     }
   };
-
+  const addCityName = (e) => {
+    if (e.key === "Enter") {
+      setDissapear(true);
+    }
+    addCityCode();
+  };
+  const addCityCode = (e) => {
+    switch (cityName) {
+      case "Paris":
+        setCityCode("PAR");
+        break;
+      case "Dakar":
+        setCityCode("DKR");
+        break;
+      case "Barcelone":
+        setCityCode("BAR");
+        break;
+      case "New York":
+        setCityCode("NYC");
+        break;
+      default:
+        setCityCode("MIL");
+        break;
+    }
+  };
   return (
     <div className="ticketContainer">
       {changeCityName()}
 
       <div className="ticketCard">
-        {" "}
-        <img src="/Ticket-Rio.png" alt="2" id="ticket" />
+        <input
+          type="text"
+          onChange={(e) => setCityName(e.target.value)}
+          onKeyDown={(e) => addCityName(e)}
+          style={{ display: dissapear ? "none" : "block" }}
+        />{" "}
+        <h3 id="cityTicket" style={{ display: dissapear ? "block" : "none" }}>
+          {cityName}{" "}
+        </h3>
+        <h1 id="cityCode" style={{ display: dissapear ? "block" : "none" }}>
+          {cityCode}
+        </h1>
+        {changeTicketCity()}
       </div>
 
       {/* <img src="/realplanet.png" alt="3" id="planet" /> */}
