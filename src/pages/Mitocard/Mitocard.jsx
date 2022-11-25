@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useParams } from "react-router-dom";
-import Cartes from "../../components/Navbar/Cartes";
 import Navbar from "../../components/Navbar/Navbar";
 
 const responsive = {
@@ -44,7 +43,7 @@ const Mitocard = ({ handleDestination, destination }) => {
     <div>
       <Navbar destination={destination} />
       <h1 className="carteTitre"> Choisis ta mitocarte </h1>
-      <div className="carouselCart">{destination} coucou</div>
+      <div id="carouselCart">
           <Carousel responsive={responsive} >
             <img 
             className="postcard"    
@@ -71,8 +70,8 @@ const Mitocard = ({ handleDestination, destination }) => {
             src={`/Cartes/${destination}/${destination}5.jpeg`}
             alt = {`${destination}5`}
             />  
-
           </Carousel>
+          </div>
     </div>
   );
 };

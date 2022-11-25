@@ -1,5 +1,7 @@
-.carouselCart {
+#carouselCart {
 margin-top: 6vm;
+border :1px solid white;
+margin-right:15vw;
 }
 
 .carteTitre {
