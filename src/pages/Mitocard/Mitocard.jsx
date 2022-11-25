@@ -97,7 +97,7 @@ const Mitocard = ({ handleDestination, destination }) => {
           <img className ="verso" src="/cartepostale.png" alt="verso"/>
             <div>
             <img 
-            className="postcardSelect"    
+            className="postcard"    
             src={`/Cartes/${destination}/${cart}.jpeg`}
             alt = {cart}
             />  
