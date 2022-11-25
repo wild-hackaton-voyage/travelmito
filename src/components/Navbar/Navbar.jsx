@@ -104,9 +104,9 @@ const Navbar = ({destination}) => {
             </Link>
             <Link to= "/Mitoselfie">  <h1 className="navTabs" id="mitoSelfie">
          Selfie
-           </h1> 
+           </h1>
            </Link>
-            <Link to= "/Mitoticket"> 
+            <Link to= "/Mitoticket">
              <h1 className="navTabs" id="mitoTicket">
            Billet d'avion
             </h1> </Link>
