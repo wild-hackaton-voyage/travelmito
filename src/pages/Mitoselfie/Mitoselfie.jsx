@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useParams } from "react-router-dom";
-import Cartes from "../../components/Navbar/Cartes";
 import Navbar from "../../components/Navbar/Navbar";
 import "./mitoselfie.css"
+import React, { useState } from "react";
 
 const responsive = {
   superLargeDesktop: {
@@ -29,45 +27,69 @@ const responsive = {
   },
 };
 
-const Mitoselfie = ({ handleDestination, destination }) => {
-  const { id } = useParams();
+function FileUploadPage() {
+  const [selectedFile, setSelectedFile] = useState();
+  const [isFilePicked, setIsFilePicked] = useState(false);
 
-  useEffect(() => {
-    handleDestination(id);
-  }, [handleDestination, id]);
+  const changeHandler = (event) => {
+    setSelectedFile(event.target.files[0]);
+    setIsSelected(true);
+  };
 
+  const handleSubmission = () => {
+  };
+}
+const Mitoselfie = ({ destination }) => {
   return (
     <div className="mitoselfie">
       <Navbar />
-      <h1>test</h1>
       <div className="carousel">
         <Carousel responsive={responsive}>
           <img
-            className="postcard"
-            src={`/Cartes/${destination}/${destination}1.jpeg`}
+            className="Selfie"
+            src={`/selfies/${destination}/${destination}1.png`}
             alt={`${destination}1`}
           />
           <img
-            className="postcard"
-            src={`/Cartes/${destination}/${destination}2.jpeg`}
+            className="Selfie"
+            src={`/selfies/${destination}/${destination}2.png`}
             alt={`${destination}2`}
           />
           <img
-            className="postcard"
-            src={`/Cartes/${destination}/${destination}3.jpeg`}
+            className="Selfie"
+            src={`/selfies/${destination}/${destination}3.png`}
             alt={`${destination}3`}
           />
           <img
-            className="postcard"
-            src={`/Cartes/${destination}/${destination}4.jpeg`}
+            className="Selfie"
+            src={`/selfies/${destination}/${destination}4.png`}
             alt={`${destination}4`}
           />
           <img
-            className="postcard"
-            src={`/Cartes/${destination}/${destination}5.jpeg`}
+            className="Selfie"
+            src={`/selfies/${destination}/${destination}5.png`}
             alt={`${destination}5`}
           />
         </Carousel>
+        <div className="upload">
+          <input type="file" name="file" onChange={changeHandler} />
+          {isSelected ? (
+            <div>
+              <p>Filename: {selectedFile.name}</p>
+              <p>Filetype: {selectedFile.type}</p>
+              <p>Size in bytes: {selectedFile.size}</p>
+              <p>
+                lastModifiedDate:{" "}
+                {selectedFile.lastModifiedDate.toLocaleDateString()}
+              </p>
+            </div>
+          ) : (
+            <p>Select a file to show details</p>
+          )}
+          <div>
+            <button onClick={handleSubmission}>Submit</button>
+          </div>
+        </div>
       </div>
     </div>
   );

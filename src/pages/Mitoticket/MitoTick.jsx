@@ -1,21 +1,57 @@
 import React from "react";
 import "./mitoticket.css";
-const Mitoticket = () => {
+const Mitoticket = ({  destination }) => {
+  console.log(destination, "destination");
+
+  const changeCityName = () => {
+
+
+    console.log(destination, "ticket");
+    switch (destination) {
+      case "France":
+        {
+          return <h1 id="cityName">PARIS</h1>;
+        }
+        break;
+      case "Canada":
+        {
+          return <h1 id="cityName">OTTAWA</h1>;
+        }
+        break;
+      case "Australie":
+        {
+          return <h1 id="cityName">SYDNEY</h1>;
+        }
+        break;
+      case "Bresil":
+        {
+          return <h1 id="cityName">RIO</h1>;
+        }
+        break;
+      case "Egypte":
+        {
+          return <h1 id="cityName">Le Caire</h1>;
+        }
+        break;
+      case "Russie":
+        {
+          return <h1 id="cityName">Moscou</h1>;
+        }
+        break;
+      default:
+        return <h1 id="cityName">RIO</h1>;
+        break;
+    }
+  };
+  
   return (
     <div className="ticketContainer">
-      <h1 id="cityName">RIO DE JANEIRO</h1>
+      {changeCityName()}
+
       <div className="ticketCard">
         {" "}
         <img src="/Ticket-Rio.png" alt="2" id="ticket" />
       </div>
-{/*       <div className="planetAnim">
-        <iframe
-          src="https://my.spline.design/worldryan-f71c4eecd1ec75de6a66ecc5af7e71ca/"
-          frameborder="0"
-          width="100%"
-          height="100%"
-        ></iframe>
-      </div> */}
     </div>
   );
 };
