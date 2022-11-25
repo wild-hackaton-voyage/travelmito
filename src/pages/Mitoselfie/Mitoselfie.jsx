@@ -32,38 +32,67 @@ const Mitoselfie = ({ destination }) => {
   function onImageChange(e) {
     setImages([...images, e.target.files]);
   }
+
+    const[displayCarousel, setCarousel]= useState(true);
+    const [displayCarte, setDisplayCarte] = useState(false);
+    const[cart, setCart]= useState("");
+  
+    console.log(destination,"carte");
+  
+    const handleMouseOver = (event) => {
+      setCart(event.target.alt);
+    }
+  
+    const handleClick = () => {
+      setCarousel(false);
+      setDisplayCarte(true);
+    }
+
+
+
+  
   console.log(destination,'selfie');
   return (
     <div className="mitoselfie">
       <Navbar />
       <div className="carousel">
-        <Carousel responsive={responsive}>
-          <img
+        {displayCarousel && <Carousel responsive={responsive}>
+        <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="Selfie"
             src={`/selfies/${destination}/${destination}1.png`}
             alt={`${destination}1`}
           />
-          <img
+    <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="Selfie"
             src={`/selfies/${destination}/${destination}2.png`}
             alt={`${destination}2`}
           />
-          <img
+         <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="Selfie"
             src={`/selfies/${destination}/${destination}3.png`}
             alt={`${destination}3`}
           />
-          <img
+       <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="Selfie"
             src={`/selfies/${destination}/${destination}4.png`}
             alt={`${destination}4`}
           />
-          <img
+        <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
             className="Selfie"
             src={`/selfies/${destination}/${destination}5.png`}
             alt={`${destination}5`}
           />
-        </Carousel>
+        </Carousel>}
+        {displayCarte &&  <img 
+            className="Selfie"
+            src={`/selfies/${destination}/${cart}.png`}
+            alt={cart}
+          />}
         <div className="upload">
           <img src="../../asssets/photo/importselfie.png" alt="" ></img>
           <input
