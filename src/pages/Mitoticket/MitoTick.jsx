@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./mitoticket.css";
-const Mitoticket = ({ handleDestination, destination }) => {
+
+const Mitoticket = ({
+  handleDestination,
+  destination,
+  ticket,
+  setTicket,
+  cityName,
+  setCityName,
+  cityCode,
+  setCityCode,
+}) => {
   console.log(destination, "destination");
-  const [cityName, setCityName] = useState("");
-  const [cityCode, setCityCode] = useState("");
+
   const [dissapear, setDissapear] = useState(false);
   const changeCityName = () => {
     switch (destination) {
@@ -47,31 +57,49 @@ const Mitoticket = ({ handleDestination, destination }) => {
     switch (destination) {
       case "France":
         {
+          {
+            setTicket("/Ticket-Paris.png");
+          }
           return <img src="/Ticket-Paris.png" alt="2" id="ticket" />;
         }
         break;
       case "Canada":
         {
+          {
+            setTicket("/Ticket-Ottawa.png");
+          }
           return <img src="/Ticket-Ottawa.png" alt="2" id="ticket" />;
         }
         break;
       case "Australie":
         {
+          {
+            setTicket("/Ticket-Sydney.png");
+          }
           return <img src="/Ticket-Sydney.png" alt="2" id="ticket" />;
         }
         break;
       case "Bresil":
         {
+          {
+            setTicket("/Ticket-Rio.png");
+          }
           return <img src="/Ticket-Rio.png" alt="2" id="ticket" />;
         }
         break;
       case "Egypte":
         {
+          {
+            setTicket("/Ticket-Cairo.png");
+          }
           return <img src="/Ticket-Cairo.png" alt="2" id="ticket" />;
         }
         break;
       case "Russie":
         {
+          {
+            setTicket("/Ticket-Moscou.png");
+          }
           return <img src="/Ticket-Moscou.png" alt="2" id="ticket" />;
         }
         break;
@@ -203,8 +231,13 @@ const Mitoticket = ({ handleDestination, destination }) => {
         </h1>
         {changeTicketCity()}
       </div>
-
-      {/* <img src="/realplanet.png" alt="3" id="planet" /> */}
+      <Link to={"/MitoPDF"} id="export">
+        {" "}
+        <h2 id="exportText">
+          Exporter <br />
+          en PDF
+        </h2>{" "}
+      </Link>
       <div className="planetAnim">{changeGlobeName()}</div>
     </div>
   );

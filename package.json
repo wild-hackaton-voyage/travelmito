@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-pdf/renderer": "^3.0.1",
     "@splinetool/react-spline": "^2.2.3",
     "@splinetool/runtime": "^0.9.143",
     "@testing-library/jest-dom": "^5.16.5",

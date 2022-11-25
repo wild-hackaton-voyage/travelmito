@@ -1,0 +1,42 @@
+.page {
+  background-color: white;
+  height: 80vh;
+  width: 30vw;
+  margin: auto;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+.ticketCard2 {
+  display: flex;
+  flex-direction: column;
+}
+#cityTicket2 {
+  color: rgb(255, 254, 152);
+
+  z-index: 7;
+  position: absolute;
+  top: 18.6%;
+  right: 53.5%;
+  font-size: 0.4rem;
+  font-weight: 100;
+  font-family: Arial, sans-serif;
+}
+
+#cityCode2 {
+  color: white;
+
+  z-index: 7;
+  position: absolute;
+  top: 20%;
+  right: 53%;
+  font-size: 0.7rem;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+}
+#ticket2 {
+  height: 30vmin;
+  width: 10vw;
+  margin-top: 5vh;
+  margin-left: 10vw;
+}
