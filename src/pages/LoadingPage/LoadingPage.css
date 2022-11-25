@@ -30,7 +30,11 @@
   width: 100vw;
   min-height: 100vh;
   background-image: url(/public/background-mapmonde.png);
-  color: white;
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: var(--title-font);
   font-size: 10vw;
   display: flex;

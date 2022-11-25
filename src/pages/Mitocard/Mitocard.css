@@ -1,12 +1,24 @@
-#carouselCart {
+.carouselCart {
 margin-top: 6vm;
 border :1px solid white;
 margin-right:15vw;
 }
 
 .carteTitre {
-
 color: white;
+}
 
+.postCard :hover{
+scale:1.5;
+}
+
+.verso {
+
+    background-image: url(/public/carte_postale.png);
+    min-height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
 }

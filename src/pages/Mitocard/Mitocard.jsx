@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
+import "./Mitocard.css"
 
 const responsive = {
   /* Responsive du carousel */
@@ -43,7 +44,7 @@ const Mitocard = ({ handleDestination, destination }) => {
     <div>
       <Navbar destination={destination} />
       <h1 className="carteTitre"> Choisis ta mitocarte </h1>
-      <div id="carouselCart">
+      <div className="carouselCart">
           <Carousel responsive={responsive} >
             <img 
             className="postcard"    
@@ -71,6 +72,11 @@ const Mitocard = ({ handleDestination, destination }) => {
             alt = {`${destination}5`}
             />  
           </Carousel>
+          </div>
+          <div className ="verso">
+
+Salut
+
           </div>
     </div>
   );
