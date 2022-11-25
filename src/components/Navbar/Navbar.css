@@ -21,3 +21,14 @@
   color: white;
   font-family: "Montserrat", sans-serif;
 }
+.navTabs {
+  margin-top: 20px;
+  font-size: medium;
+  width: auto;
+  height: 20px;
+  font-size: large;
+}
+
+.navTabs:hover {
+  color: rgb(37, 0, 80);
+}

@@ -94,21 +94,21 @@ const Navbar = ({destination}) => {
         <div className="navBar" >
             <Link to= "/">   
             <h1 id="mitoCard" className="navTabs">
-           Mithome
+           MITHOME
              </h1>
             </Link>
             <Link to= {`/carte/${destination}`}>
             <h1 id="mitoCard" className="navTabs">
-           Carte Postale
+           CARTE POSTALE
             </h1>
             </Link>
             <Link to= "/Mitoselfie">  <h1 className="navTabs" id="mitoSelfie">
-         Selfie
+         SELFIE
            </h1>
            </Link>
             <Link to= "/Mitoticket">
              <h1 className="navTabs" id="mitoTicket">
-           Billet d'avion
+         BILLET D'AVION
             </h1> </Link>
     </div>
             <div className="planetAnim">

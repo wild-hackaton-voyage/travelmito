@@ -103,9 +103,9 @@ const Mitocard = ({ handleDestination, destination }) => {
             </div>
           <div className ="cartecontainer">
           <img className ="verso" src="/cartepostale.png" alt="verso"/>
-          <textarea className="textleft" />
-          <textarea className="textright" />
-          <textarea className="textright2" />
+          <textarea placeholder=" coucou c'est moi" className="textleft" />
+          <textarea placeholder="Ryan le mitho"className="textright" />
+          <textarea placeholder="Pimpon la fougère" className="textright2" />
           <textarea className="textright3" />
           </div> 
           </div> 
