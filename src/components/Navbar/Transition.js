@@ -31,7 +31,11 @@ function Transition() {
       />
       <Route
         path="/Mitoticket"
-        element={<MitoVerse destination={destination} />}
+        element={
+          <MitoVerse
+            destination={destination}
+          />
+        }
       />
       <Route path="*" element={<ErrorMessage />} />
     </Routes>
