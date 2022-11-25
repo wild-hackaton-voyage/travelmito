@@ -10,6 +10,19 @@
   gap: 10vw;
   z-index: 100;
 }
+
+.navTabs {
+  margin-top: 20px;
+  font-size: medium;
+  width: auto;
+  height: 20px;
+  font-size: large;
+}
+
+.navTabs:hover {
+  color: rgb(37, 0, 80);
+}
+
 #mitoCard {
   padding-left: 2vw;
   opacity: 40%;

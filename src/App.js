@@ -16,9 +16,6 @@ const App = () => {
 
   return (
     <div className="ticketContainer">
-      <div className="logoBottom">
-        <img src={LogoCache} alt={LogoCache} />
-      </div>
       <Router>
       {!loading && <LoadingPage />}
         <Transition />
