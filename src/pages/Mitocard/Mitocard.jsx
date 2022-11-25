@@ -91,12 +91,19 @@ const Mitocard = ({ handleDestination, destination }) => {
             />  
           </Carousel>
           </div>}
-          {displayCarte && <div>
+          {displayCarte && <div className >
           <h1 className="carteTitre"> Ecris ta mito carte </h1>
+          <div className ="ecriCarte">
           <div className ="verso">
 
         Salut
             </div>
+            <img 
+            className="postcard"    
+            src={`/Cartes/${destination}/${cart}.jpeg`}
+            alt = {cart}
+            />  
+          </div>
           </div>}
     </div>
   );

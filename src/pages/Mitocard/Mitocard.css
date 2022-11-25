@@ -20,3 +20,8 @@ scale:1.5;
     height: 25vw;   
 
 }
+
+.ecriCarte {
+    display: flex;
+    flex-direction: row;
+}
