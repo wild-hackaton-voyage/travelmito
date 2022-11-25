@@ -32,6 +32,7 @@ const Mitoselfie = ({ destination }) => {
   function onImageChange(e) {
     setImages([...images, e.target.files]);
   }
+  console.log(destination,'selfie');
   return (
     <div className="mitoselfie">
       <Navbar />
@@ -64,12 +65,13 @@ const Mitoselfie = ({ destination }) => {
           />
         </Carousel>
         <div className="upload">
+          <img src="../../asssets/photo/importselfie.png" alt="" ></img>
           <input
             type="file"
             multiple
             accept="image/*"
             onChange={onImageChange}
-          />
+            />
         </div>
       </div>
     </div>

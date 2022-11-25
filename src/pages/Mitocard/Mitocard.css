@@ -1,10 +1,27 @@
 .carouselCart {
-margin-top: 6vm;
+margin-top: 6vw;
+margin-left: 3vw;
+margin-right:20vw;
 }
 
 .carteTitre {
-
 color: white;
+margin: 3vw;
+}
 
+.postCard :hover{
+scale:1.5;
+}
 
+.verso {
+
+    background-image: url(/public/carte_postale.png);
+    width: 50vw;
+    height: 25vw;   
+
+}
+
+.ecriCarte {
+    display: flex;
+    flex-direction: row;
 }

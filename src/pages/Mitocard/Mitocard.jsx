@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useParams } from "react-router-dom";
-import Cartes from "../../components/Navbar/Cartes";
 import Navbar from "../../components/Navbar/Navbar";
+import "./Mitocard.css"
 
 const responsive = {
   /* Responsive du carousel */
@@ -37,40 +37,74 @@ const Mitocard = ({ handleDestination, destination }) => {
     handleDestination(id);
   }, [id]);
 
-  console.log(destination, "carte");
+  const[displayCarousel, setCarousel]= useState(true);
+  const [displayCarte, setDisplayCarte] = useState(false);
+  const[cart, setCart]= useState("");
+
+  console.log(destination,"carte");
+
+  const handleMouseOver = (event) => {
+    setCart(event.target.alt);
+  }
+
+  const handleClick = () => {
+    setCarousel(false);
+    setDisplayCarte(true);
+  }
+
 
   return (
     <div>
       <Navbar destination={destination} />
+      {displayCarousel && <div className="carouselCart">
       <h1 className="carteTitre"> Choisis ta mitocarte </h1>
-      <div className="carouselCart">{destination} coucou</div>
-      <Carousel responsive={responsive}>
-        <img
-          className="postcard"
-          src={`/Cartes/${destination}/${destination}1.jpeg`}
-          alt={`${destination}1`}
-        />
-        <img
-          className="postcard"
-          src={`/Cartes/${destination}/${destination}2.jpeg`}
-          alt={`${destination}2`}
-        />
-        <img
-          className="postcard"
-          src={`/Cartes/${destination}/${destination}3.jpeg`}
-          alt={`${destination}3`}
-        />
-        <img
-          className="postcard"
-          src={`/Cartes/${destination}/${destination}4.jpeg`}
-          alt={`${destination}4`}
-        />
-        <img
-          className="postcard"
-          src={`/Cartes/${destination}/${destination}5.jpeg`}
-          alt={`${destination}5`}
-        />
-      </Carousel>
+          <Carousel responsive={responsive} >
+            <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
+            className="postcard"    
+            src={`/Cartes/${destination}/${destination}1.jpeg`}
+            alt = {`${destination}1`}
+            /> 
+                <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
+            className="postcard"    
+            src={`/Cartes/${destination}/${destination}2.jpeg`}
+            alt = {`${destination}2`}
+            /> 
+                 <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
+            className="postcard"    
+            src={`/Cartes/${destination}/${destination}3.jpeg`}
+            alt = {`${destination}3`}
+            />  
+               <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
+            className="postcard"    
+            src={`/Cartes/${destination}/${destination}4.jpeg`}
+            alt = {`${destination}4`}
+            />  
+           <img onMouseOver={(event)=>handleMouseOver(event)}
+                  onClick={handleClick}
+            className="postcard"    
+            src={`/Cartes/${destination}/${destination}5.jpeg`}
+            alt = {`${destination}5`}
+            />  
+          </Carousel>
+          </div>}
+          {displayCarte && <div className >
+          <h1 className="carteTitre"> Ecris ta mito carte </h1>
+          <div className ="ecriCarte">
+          <div className ="verso">
+
+        Salut
+            </div>
+            <img 
+            className="postcard"    
+            src={`/Cartes/${destination}/${cart}.jpeg`}
+            alt = {cart}
+            />  
+          </div>
+          </div>}
     </div>
   );
 };
