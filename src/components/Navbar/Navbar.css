@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 .navBar {
+  position :relative;
   height: 11vh;
   width: 70vw;
 
-  background-color: rgba(93, 81, 237, 50%);
+  background-color: rgba(94, 81, 237, 0.809);
   display: flex;
-
   gap: 10vw;
+  z-index: 100;
 }
 #mitoCard {
   padding-left: 2vw;

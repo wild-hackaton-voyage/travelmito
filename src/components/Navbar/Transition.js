@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Mithome from "../../pages/Mithome/Mithome";
 import Mitocard from "../../pages/Mitocard/Mitocard";
 import Mitoselfie from "../../pages/Mitoselfie/Mitoselfie";
