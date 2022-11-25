@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Navbar from "../../components/Navbar/Navbar";
 import "./mitoselfie.css"
-import React, { useState } from "react";
+import { useState } from "react";
 
 const responsive = {
   superLargeDesktop: {
@@ -27,19 +27,11 @@ const responsive = {
   },
 };
 
-function FileUploadPage() {
-  const [selectedFile, setSelectedFile] = useState();
-  const [isFilePicked, setIsFilePicked] = useState(false);
-
-  const changeHandler = (event) => {
-    setSelectedFile(event.target.files[0]);
-    setIsSelected(true);
-  };
-
-  const handleSubmission = () => {
-  };
-}
 const Mitoselfie = ({ destination }) => {
+  const [images, setImages] = useState([]);
+  function onImageChange(e) {
+    setImages([...images, e.target.files]);
+  }
   return (
     <div className="mitoselfie">
       <Navbar />
@@ -72,23 +64,12 @@ const Mitoselfie = ({ destination }) => {
           />
         </Carousel>
         <div className="upload">
-          <input type="file" name="file" onChange={changeHandler} />
-          {isSelected ? (
-            <div>
-              <p>Filename: {selectedFile.name}</p>
-              <p>Filetype: {selectedFile.type}</p>
-              <p>Size in bytes: {selectedFile.size}</p>
-              <p>
-                lastModifiedDate:{" "}
-                {selectedFile.lastModifiedDate.toLocaleDateString()}
-              </p>
-            </div>
-          ) : (
-            <p>Select a file to show details</p>
-          )}
-          <div>
-            <button onClick={handleSubmission}>Submit</button>
-          </div>
+          <input
+            type="file"
+            multiple
+            accept="image/*"
+            onChange={onImageChange}
+          />
         </div>
       </div>
     </div>

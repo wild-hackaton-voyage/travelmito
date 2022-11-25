@@ -5,3 +5,29 @@
     width: 25vw;
     height: 25vh;
 }
+
+.upload{
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    width: 25%;
+    height: 25%;
+    padding-left: 50%;
+    background-color: aqua;
+}
+.upload input{
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    width: 25vw;
+    height: 25vh;
+    position: absolute;
+    z-index: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 2.5vw;
+    font-weight: bold;
+    text-align: center;
+}
