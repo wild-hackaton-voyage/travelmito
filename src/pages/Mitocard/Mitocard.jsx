@@ -94,16 +94,15 @@ const Mitocard = ({ handleDestination, destination }) => {
           {displayCarte && <div className >
           <h1 className="carteTitre"> Ecris ta mito carte </h1>
           <div className ="ecriCarte">
-          <div className ="verso">
-
-        Salut
-            </div>
+          <img className ="verso" src="/cartepostale.png" alt="verso"/>
+            <div>
             <img 
-            className="postcard"    
+            className="postcardSelect"    
             src={`/Cartes/${destination}/${cart}.jpeg`}
             alt = {cart}
             />  
-          </div>
+            </div>
+          </div>  
           </div>}
     </div>
   );
